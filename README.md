@@ -12,3 +12,6 @@ Moloch 2.3.1 docker image
 
 <b>4. Start using moloch: </b>
 <br>enter http://localhost:8005/ in your browser
+
+<b>5. put your pcap files in the /pcap directory (automatic parsing in 5 minutes) </b>
+
