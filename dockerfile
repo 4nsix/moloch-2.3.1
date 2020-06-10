@@ -59,12 +59,6 @@ RUN chmod 755 /data/automatic_parsing.sh
 RUN echo "*/5 * * * * root /data/automatic_parsing.sh >> /var/log/cron.log 2>&1" > /etc/cron.d/automatic_parsing
 RUN chmod +x /etc/cron.d/automatic_parsing
 
-# ADD fstab & credentials
-RUN echo "username="$SMB_USER'\n'"password="$SMB_PASSWORD'\n' > /data/.smbcredentials
-RUN chmod 600 /data/.smbcredentials
-RUN echo $SMB_SHARE" /data/pcap cifs rw,credentials=/data/.smbcredentials 0 0" >> /etc/fstab
-#RUN mount -a
-
 ENV PATH="/data:/data/moloch/bin:${PATH}"
 EXPOSE 8005
 WORKDIR /data/moloch
