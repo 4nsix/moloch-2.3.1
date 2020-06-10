@@ -53,6 +53,15 @@ then
    service cron start 
 fi 
 
+if [ "$SMB" = "on" ]
+then
+    echo "Launch SMB connection..."
+    echo "username="$SMB_USER'\n'"password="$SMB_PASSWORD'\n' > /data/.smbcredentials
+    chmod 600 /data/.smbcredentials
+    echo $SMB_SHARE" /data/pcap cifs rw,credentials=/data/.smbcredentials 0 0" >> /etc/fstab
+    mount -a
+fi 
+
 if [ "$VIEWER" = "on" ]
 then
     echo "Launch viewer..."
