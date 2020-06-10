@@ -21,6 +21,9 @@ services:
     environment:
       - INITALIZEDB=true
       - MOLOCH_PASSWORD=CHANGE_PASSWORD!!
+      - SMB_USER=CHANGE_SMB_USERNAME!!
+      - SMB_PASSWORD=CHANGE_SMB_PASSWORD!!
+      - SMB_SHARE=CHANGE_SMB_SHARE!!
       - WIPEDB=false
       - MOLOCH_VERSION=2.3.0-1_amd64
       - UBUNTU_VERSION=18.04
@@ -30,9 +33,7 @@ services:
       - CAPTURE=off
       - VIEWER=on
       - CRON=on
-      - SMB_USER=CHANGE_SMB_USERNAME!!
-      - SMB_PASSWORD=CHANGE_SMB_PASSWORD!!
-      - SMB_SHARE=CHANGE_SMB_SHARE!!
+      - SMB=on
     depends_on:
       - elasticsearch
     ports:
