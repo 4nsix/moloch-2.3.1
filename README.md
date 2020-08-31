@@ -9,7 +9,7 @@
 <b>2b. Change your SMB password, username and path in the docker-compose.yml:</b>
 <br> SMB_USER=CHANGE_SMB_USERNAME!!
 <br> SMB_PASSWORD=CHANGE_SMB_PASSWORD!!
-<br> SMB_SHARE=CHANGE_SMB_SHARE!!
+<br> SMB_DOMAIN=CHANGE_SMB_DOMAIN!!
 <br> SMB_SHARE=CHANGE_SMB_SHARE!!
 
 <b>3. Use docker-compose to compose the images:</b>
