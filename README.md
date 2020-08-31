@@ -10,6 +10,7 @@
 <br> SMB_USER=CHANGE_SMB_USERNAME!!
 <br> SMB_PASSWORD=CHANGE_SMB_PASSWORD!!
 <br> SMB_SHARE=CHANGE_SMB_SHARE!!
+<br> SMB_SHARE=CHANGE_SMB_SHARE!!
 
 <b>3. Use docker-compose to compose the images:</b>
 <br>docker-compose up
